@@ -1,3 +1,21 @@
+This is for Windows
+
+conda create -n privategpt python=3.11
+conda activate privategpt
+pip install poetry
+$env:PGPT_PROFILES='ollama'
+rm poetry.lock 
+poetry install --no-root  #Now it Take the file pyproject.toml
+pip install build
+poetry install --extras "ui llms-openai-like llms-ollama embeddings-ollama vector-stores-qdrant embeddings-huggingface"
+
+Install Ollama on windows. After installation stop Ollama server
+Ollama pull nomic-embed-text
+Ollama pull mistral
+Ollama serve
+
+
+Here the file settings-ollama.yaml:
 server:
   env_name: ${APP_ENV:Ollama}
 
@@ -25,3 +43,7 @@ vectorstore:
 
 qdrant:
   path: local_data/private_gpt/qdrant
+
+
+This should similar run for Docker.
+--wtth is replace --extra

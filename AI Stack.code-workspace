@@ -1,0 +1,112 @@
+{
+	"folders": [
+		{
+			"path": "../haystack"
+		},
+		{
+			"path": "../cdQnA"
+		},
+		{
+			"path": "../GPT4All_Medium"
+		},
+		{
+			"name": "Data-Science-Python",
+			"path": "../Data-Science-Python"
+		},
+		{
+			"path": "../llama"
+		},
+		{
+			"path": "../Ollama"
+		},
+		{
+			"path": "../lora"
+		},
+		{
+			"name": "chatGPT-gpt4all",
+			"path": "../chatGPT-gpt4all"
+		},
+		{
+			"name": "streamlit-app-",
+			"path": "../streamlit-app-"
+		},
+		{
+			"name": "dagger-chatbot",
+			"path": "../dagger-chatbot"
+		},
+		{
+			"name": "ZephyrGPT4ALL",
+			"path": "../ZephyrGPT4ALL"
+		},
+		{
+			"name": "rag-fusion",
+			"path": "../rag-fusion"
+		},
+		{
+			"name": "finsight",
+			"path": "../finsight"
+		},
+		{
+			"path": "../tessertactSampl"
+		},
+		{
+			"name": "pytesseract",
+			"path": "../pytesseract"
+		},
+		{
+			"name": "EasyOCR",
+			"path": "../EasyOCR"
+		},
+		{
+			"name": "mamba-chat",
+			"path": "../../mamba/mamba-chat"
+		},
+		{
+			"name": "VMamba",
+			"path": "../../mamba/VMamba"
+		},
+		{
+			"path": "../../docVQA"
+		},
+		{
+			"name": "MP-DocVQA-Framework",
+			"path": "../../docVQA/MP-DocVQA-Framework"
+		},
+		{
+			"name": "docvqa",
+			"path": "../../docVQA/docvqa"
+		},
+		{
+			"name": "layoutlm-base-uncased",
+			"path": "../../docVQA/layoutlm-base-uncased"
+		},
+		{
+			"name": "LLMs-for-DocVQA",
+			"path": "../../docVQA/LLMs-for-DocVQA"
+		},
+		{
+			"name": "fastchat-chatbot",
+			"path": "../../fastchat/fastchat-chatbot"
+		},
+		{
+			"name": "document-ai-transformers",
+			"path": "../../fastchat/document-ai-transformers"
+		},
+		{
+			"name": "RepoForLLMs",
+			"path": "../../Finetune8x7b/RepoForLLMs"
+		},
+		{
+			"name": "LayoutLMV3",
+			"path": "../LayoutLMV3"
+		},
+		{
+			"name": "notebooks",
+			"path": "../notebooks"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}

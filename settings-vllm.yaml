@@ -1,17 +1,21 @@
-server:
-  env_name: ${APP_ENV:vllm}
+#server:
+#  env_name: ${APP_ENV:vllm}
 
 llm:
   mode: openailike
 
+#embedding:
+#  mode: huggingface
+#  ingest_mode: simple
+
 embedding:
-  mode: huggingface
+  mode: local
   ingest_mode: simple
 
-huggingface:
+local:
   embedding_hf_model_name: BAAI/bge-small-en-v1.5
 
 openai:
-  api_base: http://localhost:8000/v1
+  api_base: http://localhost:1234/v1 # LM Studio base URL
   api_key: EMPTY
-  model: facebook/opt-125m
+  model: mixtral  # this can be whatever you want
