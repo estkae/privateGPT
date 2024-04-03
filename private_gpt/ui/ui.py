@@ -6,6 +6,7 @@ import time
 from collections.abc import Iterable
 from pathlib import Path
 from typing import Any
+import os
 
 import gradio as gr  # type: ignore
 from fastapi import FastAPI
@@ -417,12 +418,30 @@ class PrivateGptUi:
                         self._set_system_prompt,
                         inputs=system_prompt_input,
                     )
+                def get_model_label() -> str | None:
+                    # Determine the model label based on PGPT_PROFILES env variable.
+                    pgpt_profiles = os.environ.get("PGPT_PROFILES")
+                    if pgpt_profiles == "ollama":
+                        return settings().ollama.llm_model
+                    elif pgpt_profiles == "vllm":
+                        return settings().openai.model
+                    else:
+                        return None
 
                 with gr.Column(scale=7, elem_id="col"):
+                    # Determine the model label based on the value of PGPT_PROFILES
+                    model_label = get_model_label()
+                    if model_label is not None:
+                        label_text = (
+                            f"LLM: {settings().llm.mode} | Model: {model_label}"
+                        )
+                    else:
+                        label_text = f"LLM: {settings().llm.mode}"
+
                     _ = gr.ChatInterface(
                         self._chat,
                         chatbot=gr.Chatbot(
-                            label=f"LLM: {settings().llm.mode}",
+                            label=label_text,
                             show_copy_button=True,
                             elem_id="chatbot",
                             render=False,
@@ -434,6 +453,7 @@ class PrivateGptUi:
                         additional_inputs=[mode, upload_button, system_prompt_input],
                     )
         return blocks
+    
 
     def get_ui_blocks(self) -> gr.Blocks:
         if self._ui_block is None:
